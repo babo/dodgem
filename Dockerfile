@@ -26,3 +26,5 @@ RUN apt update && \
     apt install -y libcurl4 libjansson4 libcudart10.1 libgomp1
 
 COPY --from=builder /src/ccminer/ccminer /usr/local/bin/
+
+ENTRYPOINT /usr/local/bin/ccminer
